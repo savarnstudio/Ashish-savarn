@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ashish Savarn | Creative Designer & Video Editor</title>
+
+<meta name="description" content="Ashish Savarn - Creative Designer & Video Editor specializing in high-converting ad creatives, AI visuals, and motion design for brands.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gradient:linear-gradient(90deg,#7b2ff7,#00c6ff);
+--bg:#0a0a0a;
+--card:#111;
+--text:#fff;
+--dim:#9ca3af;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+background:var(--bg);
+color:var(--text);
+max-width:1300px;
+margin:auto;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+position:sticky;
+top:0;
+background:rgba(10,10,10,.85);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{font-weight:700;}
+
+.nav{display:flex;gap:18px;align-items:center;}
+
+.nav a{
+color:var(--dim);
+text-decoration:none;
+font-size:14px;
+}
+
+.cta{
+background:var(--gradient);
+padding:8px 16px;
+border-radius:6px;
+color:#fff !important;
+}
+
+/* HERO */
+.hero{
+min-height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:0 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:clamp(34px,6vw,64px);
+font-weight:800;
+}
+
+.hero span{
+background:var(--gradient);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:16px;
+color:var(--dim);
+max-width:600px;
+}
+
+.hero-btns{
+margin-top:28px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:12px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
+.primary{background:var(--gradient);color:#fff;}
+.secondary{border:1px solid rgba(255,255,255,.15);color:#fff;}
+
+/* WORK */
+.work{padding:60px 20px;text-align:center;}
+.work h2{margin-bottom:20px;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:14px;
+}
+
+.card{
+aspect-ratio:9/16;
+border-radius:14px;
+overflow:hidden;
+background:var(--card);
+border:1px solid rgba(255,255,255,.05);
+transition:.35s;
+cursor:pointer;
+position:relative;
+}
+
+.card:hover{
+transform:scale(1.08) translateY(-8px);
+z-index:10;
+border-color:#7b2ff7;
+}
+
+.card video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.5),transparent);
+}
+
+/* MODAL */
+.video-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:3000;
+}
+
+#mainPlayer{
+max-width:90%;
+max-height:85vh;
+border-radius:12px;
+}
+
+/* FOOTER */
+.footer{
+padding:70px 20px 30px;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-col h4{
+margin-bottom:12px;
+font-size:14px;
+}
+
+.footer-col a{
+display:block;
+color:var(--dim);
+text-decoration:none;
+margin-bottom:8px;
+font-size:13px;
+}
+
+.footer-col a:hover{
+color:#fff;
+}
+
+.brand p{
+color:var(--dim);
+font-size:13px;
+margin:10px 0 15px;
+max-width:250px;
+}
+
+.social-icons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.social-icons a{
+display:flex;
+align-items:center;
+justify-content:center;
+width:36px;
+height:36px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:8px;
+color:#9ca3af;
+transition:.3s;
+}
+
+.social-icons a:hover{
+color:#fff;
+border-color:#7b2ff7;
+transform:scale(1.1);
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+color:#777;
+font-size:12px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+.grid{grid-template-columns:repeat(3,1fr);}
+}
+
+@media(max-width:900px){
+.footer-container{
+grid-template-columns:1fr 1fr;
+text-align:center;
+}
+.brand p{margin:auto;}
+}
+
+@media(max-width:700px){
+.grid{grid-template-columns:repeat(2,1fr);}
+.hero{min-height:auto;padding-top:60px;}
+}
+
+@media(max-width:500px){
+.grid{grid-template-columns:1fr;}
+.footer-container{grid-template-columns:1fr;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Ashish Savarn</div>
+
+<div class="nav">
+<a href="#work">Work</a>
+<a href="https://wa.me/918207487758" class="cta">Hire</a>
+</div>
+</header>
+
+<section class="hero">
+<h1>I Create <span>High-Converting Ads</span></h1>
+<p>Helping brands grow with powerful video editing, AI visuals and motion design.</p>
+
+<div class="hero-btns">
+<a href="#work" class="btn primary">View Work</a>
+<a href="https://wa.me/918207487758" class="btn secondary">Contact</a>
+</div>
+</section>
+
+<section id="work" class="work">
+
+<h2>Selected Work</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openPlayer('video01.mp4')">
+<video src="video01.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<div class="card" onclick="openPlayer('video02.mp4')">
+<video src="video02.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<div class="card" onclick="openPlayer('video03.mp4')">
+<video src="video03.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<div class="card" onclick="openPlayer('video04.mp4')">
+<video src="video04.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<div class="card" onclick="openPlayer('video05.mp4')">
+<video src="video05.mp4" autoplay muted loop playsinline></video>
+</div>
+
+</div>
+
+</section>
+
+<div class="video-modal" id="videoModal" onclick="closePlayer(event)">
+<video id="mainPlayer" controls></video>
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col brand">
+<h3>Ashish Savarn</h3>
+<p>
+Creating high-converting ad creatives, AI visuals, and motion content for modern brands.
+</p>
+
+<div class="social-icons">
+
+<a href="https://www.behance.net/ashishsavarn" target="_blank">
+<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7.5 9.5h3a2.5 2.5 0 010 5h-3v-5zm0-4h2.5a2 2 0 010 4H7.5V5.5zM3 3h8a4 4 0 012 7 4.5 4.5 0 01-2.5 8H3V3zm13 6h5v2h-5V9zm0 4a2 2 0 104 0h2a4 4 0 11-8 0 4 4 0 018-1h-6z"/></svg>
+</a>
+
+<a href="https://www.instagram.com/_ashishsavarn/?hl=en" target="_blank">
+<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+</a>
+
+<a href="https://www.linkedin.com/in/ashish-savarn-8a6035285/" target="_blank">
+<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M4 3a2 2 0 100 4 2 2 0 000-4zm-1 6h2v12H3V9zm6 0h2v2h.1a2.2 2.2 0 012-1c2.1 0 2.5 1.4 2.5 3.2V21h-2v-6.3c0-1.5 0-3.4-2-3.4s-2.3 1.6-2.3 3.3V21H9V9z"/></svg>
+</a>
+
+<a href="https://in.pinterest.com/iashishsavarn/" target="_blank">
+<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.6 19.4c-.1-.8-.2-2 .1-2.9l1.4-5.8s-.4-.8-.4-2c0-1.9 1.1-3.3 2.5-3.3 1.2 0 1.8.9 1.8 2 0 1.2-.8 3-1.2 4.6-.3 1.4.7 2.6 2.1 2.6 2.5 0 4.2-3.2 4.2-7 0-2.9-2-5-5.6-5a6.4 6.4 0 00-6.6 6.5c0 1.2.4 2 .9 2.6.2.2.2.3.2.6-.1.3-.2 1-.3 1.2-.1.2-.3.3-.6.2-1.7-.7-2.8-2.7-2.8-5.4 0-4 3.4-8.7 10.1-8.7 5.4 0 9 3.9 9 8.2 0 5.6-3.1 9.8-7.7 9.8-1.5 0-2.9-.8-3.4-1.8l-.9 3.3c-.3 1-.9 2.2-1.3 2.9A10 10 0 1012 2z"/></svg>
+</a>
+
+</div>
+</div>
+
+<div class="footer-col">
+<h4>Quick Links</h4>
+<a href="#work">Work</a>
+<a href="https://www.behance.net/ashishsavarn" target="_blank">Behance</a>
+<a href="https://www.instagram.com/_ashishsavarn/?hl=en" target="_blank">Instagram</a>
+<a href="https://www.linkedin.com/in/ashish-savarn-8a6035285/" target="_blank">LinkedIn</a>
+<a href="https://in.pinterest.com/iashishsavarn/" target="_blank">Pinterest</a>
+</div>
+
+<div class="footer-col">
+<h4>Services</h4>
+<a href="#">Ad Creatives</a>
+<a href="#">AI Visuals</a>
+<a href="#">Motion Design</a>
+<a href="#">E-commerce Creatives</a>
+</div>
+
+<div class="footer-col">
+<h4>Contact</h4>
+<p>New Delhi</p>
+<a href="mailto:iashishsavarn@gmail.com">iashishsavarn@gmail.com</a>
+<a href="tel:8207487758">8207487758</a>
+</div>
+
+</div>
+
+<p class="footer-bottom">© 2026 Ashish Savarn All Rights reserved</p>
+
+</footer>
+
+<script>
+
+document.querySelectorAll(".card video").forEach(v=>{
+v.muted=true
+v.play().catch(()=>{})
+})
+
+function openPlayer(src){
+const modal=document.getElementById("videoModal")
+const player=document.getElementById("mainPlayer")
+player.src=src
+modal.style.display="flex"
+player.play()
+}
+
+function closePlayer(e){
+if(e.target.id==="videoModal"){
+const modal=document.getElementById("videoModal")
+const player=document.getElementById("mainPlayer")
+player.pause()
+player.src=""
+modal.style.display="none"
+}
+}
+
+</script>
+
+</body>
+</html>
